@@ -1,0 +1,31 @@
+body{
+  background-color: red;
+}
+
+.Title{
+  font-size: 32pt;
+  text-align: center;
+}
+form{
+  position: absolute;
+  text-align: center;
+  width: 33%;
+  left: 33%;
+}
+
+label{
+  font-size: 22pt;
+}
+select{
+  font-size: 48pt;
+}
+.Bill-Form{
+  font-size: 22pt;
+}
+
+.Bill-Submit{
+  font-size: 22pt;
+}
+.Main{
+  text-align: center;
+}

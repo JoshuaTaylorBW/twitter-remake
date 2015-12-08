@@ -1,0 +1,9 @@
+{
+  "firebase": "SparksPractice2",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

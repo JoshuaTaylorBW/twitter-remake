@@ -1,0 +1,36 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/5.0.0/bin/node /usr/local/bin/firebase deploy
+[debug] Platform:     darwin
+[debug] Node Version: v5.0.0
+[debug] Time:         Wed Dec 02 2015 14:19:22 GMT-0700 (MST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/SparksPractice2/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/SparksPractice2/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'SparksPractice2'...
+[info] 
+[info] i  deploying hosting
+[info] i  preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/firebase/SparksPractice2/uploads/-K4ZZ5KnFPgZwPyE8HZ8?token=XXX&fileCount=4&message= 
+[debug] <<< HTTP RESPONSE 200
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/5.0.0/bin/node /usr/local/bin/firebase deploy
+[debug] Platform:     darwin
+[debug] Node Version: v5.0.0
+[debug] Time:         Wed Dec 02 2015 14:22:06 GMT-0700 (MST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/SparksPractice2/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/SparksPractice2/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'SparksPractice2'...
+[info] 
+[info] i  deploying hosting
+[info] i  preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/firebase/SparksPractice2/uploads/-K4ZZiQkLNCy-wCq7k9m?token=XXX&fileCount=4&message= 
+[debug] <<< HTTP RESPONSE 200

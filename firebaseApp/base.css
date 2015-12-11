@@ -1,0 +1,45 @@
+.top-banner{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 5vh;
+  background-color: #9B9B8C;
+}
+.grays{
+  background-color: #EEEEEE;
+}
+.bottom-banner{
+    position: absolute;
+    top: 95vh;
+    left: 0%;
+    width: 100vw;
+    height: 5vh;
+    background-color: #686859;
+}
+.whites{
+  background-color: #FFFFFF;
+}
+.reg-button{
+  background-color: #353526;
+  color: white;
+  height: 48px;
+  width: 225px;
+  border-radius: 10px;
+  border: 0px solid #353526;
+  font-size: 18pt;
+}
+.copyright-stuff{
+  color: white;
+  font-size: 16pt;
+  display: table-cell;
+  position: absolute;
+  height: 100%;
+  vertical-align: middle;
+}
+.copyright-stuff p{
+  display: inline;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+}

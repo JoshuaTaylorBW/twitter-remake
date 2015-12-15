@@ -2,47 +2,52 @@ var speakInput;
 var btnSpeak;
 var wordList;
 
+var words = [];
+var iterator = 0;
+
+var timer = 0;
+
+var rap = "you and me we just dont get a long at all any more"
 $(document).ready(function(){
-  speakInput = $("#inpSpeakMe");
-  btnSpeak = $("#btnSpeak");
-  wordList = $("#wordList");
-  btnSpeak.bind("click", saySomething)
-    .removeAttr("disabled");
+  speakInput = $("#here");
+  btnSpeak = $("#submitty");
+  wordList = $("#wordlist");
 });
 
 
 function saySomething(evt) {
-  var toSay = speakInput.val();
+  iterator = 0;
+  var toSay = rap;
+  console.log(toSay);
+  words = toSay.split(" ");
+  
 
-  var words = toSay.split("");
-  wordList.html("");
-  for (var i = 0; i < words.length; i++) {
-    words[i] = $("<span>").text(words[i]);
-    wordList.append(words[i]);
-    wordList.append("");
-  }
-  chrome.tts.speak(toSay, {
-      onEvent: function(event) {
-        if (event.type == "word") {
-          var start = event.charIndex;
-          wordList.find("span").removeClass("highlight");
-          var inWord = true;
-          while (inWord) {
-            words[start++].addClass("highlight");
-            if ((words[start] === undefined) || (words[start].text() == " ")) {
-              inWord = false;
-            }
-          }
-        } else if (event.type == "end") {
-          wordList.find("span").removeClass("highlight");
-        }
-      }
-    }, function(evt) {
-    });
+  speakNumber(words);      
+     
 }
 
+function speakNumber(num){
+  if(iterator < num.length){
+    chrome.tts.speak(num[iterator], {'lang': 'en-US'});
+    console.log(iterator);
+    iterator++;
+    setTimeout(function(){speakNumber2(num)}, 880);
+  }
+}
+function speakNumber2(num){
+  if(iterator < num.length){
+    chrome.tts.speak(num[iterator], {'lang': 'en-US'});
+    console.log(iterator);
+    iterator++;
+    setTimeout(function(){speakNumber(num)}, 880);
+  }
+}
 
 function beginRapping(BPM) {
   console.log("The BPM is " + BPM);
 
+}
+
+function stopwatch(){
+    timer++;
 }

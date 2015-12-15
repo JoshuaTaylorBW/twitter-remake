@@ -11,6 +11,7 @@ var queryInput = document.querySelector('#query'),
     audioTag = document.querySelector('#audio'),
     playButton = document.querySelector('#play');
 
+audioTag.volume = 0.1;
 audioTag.addEventListener('timeupdate', function() {
   var progressIndicator = document.querySelector('#progress');
   if (progressIndicator && audioTag.duration) {
@@ -20,6 +21,7 @@ audioTag.addEventListener('timeupdate', function() {
 
 playButton.addEventListener('click', function() {
   audioTag.play();
+  saySomething();
 });
 
 result.style.display = 'none';
@@ -101,9 +103,9 @@ document.querySelector('form').addEventListener('submit', function(e) {
             return intB.count - intA.count;
           }).splice(0,5);
 
-          text.innerHTML = '<div id="guess">Guess for track <strong>' + track.name + '</strong> by ' +
+          text.innerHTML = '<div id="guess"><p id="theGuess">Guess for track <strong>' + track.name + '</strong> by ' +
             '<strong>' + track.artists[0].name + '</strong> is <strong>' + Math.round(top[0].tempo) + ' BPM</strong>' +
-            ' with ' + top[0].count + ' samples.</div>';
+            ' with ' + top[0].count + ' samples.</p></div>';
 
             beginRapping(Math.round(top[0].tempo));
 

@@ -4,13 +4,14 @@
 		<title>Finding out the BPM of a song using Javascript</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		    <script  src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script  src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script  src="jquery.js"></script>
 	</head>
 	<body>
 
 		<form>
 			<input type="text" id="query" placeholder="Type the name of a track (e.g. Beyonce - Baby Boy)">
-			<input type="submit" value="Search track &amp; Calculate tempo">
+			<input type="submit" id="submitty" value="Search track &amp; Calculate tempo">
 		</form>
 
 		<div id="result">
@@ -26,19 +27,21 @@
 
 		<footer>
 			<h3>APIs used</h3>
-			<p>This project uses these public APIs:</p>
+			<p id="here">This project uses these public APIs:</p>
 			<ul>
 				<li><a href="https://developer.spotify.com/web-api/">Spotify Web API</a></li>
 				<li><a href="http://developer.echonest.com/docs/v4">Echo Nest API</a></li>
 			</ul>
 		</footer>
+
+		<span id="wordlist"></span>
+ 
 		<footer class="about">
 
 		</footer>
 		<script src="spotify-web-api.js"></script>
 		<script src="echonest-api.js"></script>
 		<script src="script.js"></script>
-		<script src="My-Spotify.js"></script>
 		<script src="robot.js"></script>
 	</body>
 </html>

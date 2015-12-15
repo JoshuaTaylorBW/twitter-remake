@@ -1,7 +1,8 @@
 spotifyRequest();
 function spotifyRequest  () {
+	var searchTerm = $("#query").val();
 	var request = $.ajax({
-	    url: "https://api.spotify.com/v1/search?type=track&q=started%20from%20the%20bottom",
+	    url: "https://api.spotify.com/v1/search?type=track&q=" + searchTerm,
 	    method: "GET",
 	    dataType: "json",
 	});

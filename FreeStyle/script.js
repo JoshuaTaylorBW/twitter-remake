@@ -4,12 +4,15 @@
  */
 var spotifyApi = new SpotifyWebApi();
 var echonestApi = new EchonestApi();
+var bpms = 0;
 
 var queryInput = document.querySelector('#query'),
     result = document.querySelector('#result'),
     text = document.querySelector('#text'),
     audioTag = document.querySelector('#audio'),
     playButton = document.querySelector('#play');
+var rapButton = document.getElementById("rap");
+
 
 audioTag.volume = 0.1;
 audioTag.addEventListener('timeupdate', function() {
@@ -21,7 +24,6 @@ audioTag.addEventListener('timeupdate', function() {
 
 playButton.addEventListener('click', function() {
   audioTag.play();
-  saySomething();
 });
 
 result.style.display = 'none';
@@ -141,7 +143,13 @@ document.querySelector('form').addEventListener('submit', function(e) {
                     });
                 }
               }
-              console.log(result.response.songs[0]);
+
+              bpms = Math.round(top[0].tempo);
+              console.log("The BPM IS IN SCRIPT" + Math.round(top[0].tempo));
+              rapButton.addEventListener('click', function(){
+                  saySomething(Math.round(top[0].tempo));
+              })
+
             });
 
           result.style.display = 'block';

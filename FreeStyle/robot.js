@@ -7,7 +7,9 @@ var iterator = 0;
 
 var timer = 0;
 
-var rap = "you and me we just dont get a long at all any more"
+var millisecondsBetween = 0;
+
+var rap = "sheep in who dees and a snap back or may be just a pack of rats ask ing for res pect"
 $(document).ready(function(){
   speakInput = $("#here");
   btnSpeak = $("#submitty");
@@ -15,12 +17,15 @@ $(document).ready(function(){
 });
 
 
-function saySomething(evt) {
+function saySomething(bpms) {
   iterator = 0;
   var toSay = rap;
   console.log(toSay);
   words = toSay.split(" ");
+  console.log(bpms);
   
+  millisecondsBetween = (60 / bpms) * 1000;
+  console.log(millisecondsBetween + "the millisecondsBetween");
 
   speakNumber(words);      
      
@@ -31,7 +36,7 @@ function speakNumber(num){
     chrome.tts.speak(num[iterator], {'lang': 'en-US'});
     console.log(iterator);
     iterator++;
-    setTimeout(function(){speakNumber2(num)}, 880);
+    setTimeout(function(){speakNumber2(num)}, millisecondsBetween);
   }
 }
 function speakNumber2(num){
@@ -39,7 +44,7 @@ function speakNumber2(num){
     chrome.tts.speak(num[iterator], {'lang': 'en-US'});
     console.log(iterator);
     iterator++;
-    setTimeout(function(){speakNumber(num)}, 880);
+    setTimeout(function(){speakNumber(num)}, millisecondsBetween);
   }
 }
 

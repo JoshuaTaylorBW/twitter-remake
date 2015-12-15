@@ -57,13 +57,14 @@ input[type=submit] {
 	margin-bottom: 1em;
 }
 
-#play {
+#play, #rap, #stop {
 	padding: 0.5em;
 	border: 1px solid #ccc;
 	background-color: #ddd;
 	cursor: pointer;
 	font-size:1em;
 	display:block;
+	margin-bottom: 10px;
 	width: 100%
 }
 

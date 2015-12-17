@@ -24,6 +24,7 @@ audioTag.addEventListener('timeupdate', function() {
 
 playButton.addEventListener('click', function() {
   audioTag.play();
+  saySomething(bpms);
 });
 
 result.style.display = 'none';
@@ -147,7 +148,6 @@ document.querySelector('form').addEventListener('submit', function(e) {
               bpms = Math.round(top[0].tempo);
               console.log("The BPM IS IN SCRIPT" + Math.round(top[0].tempo));
               rapButton.addEventListener('click', function(){
-                  saySomething(Math.round(top[0].tempo));
               })
 
             });

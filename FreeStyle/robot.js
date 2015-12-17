@@ -18,7 +18,7 @@ $(document).ready(function(){
 });
 
 function setRap(newRap){
-  rap = newRap; 
+  rap = newRap;
   console.log(rap);
 }
 function saySomething(bpms) {
@@ -27,28 +27,38 @@ function saySomething(bpms) {
   console.log(toSay);
   words = toSay.split(" ");
   console.log(bpms);
-  
+
   millisecondsBetween = (60 / bpms) * 1000;
   console.log(millisecondsBetween + "the millisecondsBetween");
 
-  speakNumber(words);      
-     
+  speakNumber(words);
+
 }
 
 function speakNumber(num){
-  if(iterator < num.length){
-    chrome.tts.speak(num[iterator], {'lang': 'en-US'});
-    console.log(iterator);
+  if(num[iterator] === "pause"){
     iterator++;
     setTimeout(function(){speakNumber2(num)}, millisecondsBetween);
+  }else{
+    if(iterator < num.length){
+      chrome.tts.speak(num[iterator], {'lang': 'en-US', 'rate':1.3});
+      console.log(iterator);
+      iterator++;
+      setTimeout(function(){speakNumber2(num)}, millisecondsBetween);
+    }
   }
 }
 function speakNumber2(num){
-  if(iterator < num.length){
-    chrome.tts.speak(num[iterator], {'lang': 'en-US'});
-    console.log(iterator);
+  if(num[iterator] === "pause"){
     iterator++;
     setTimeout(function(){speakNumber(num)}, millisecondsBetween);
+  }else{
+    if(iterator < num.length){
+      chrome.tts.speak(num[iterator], {'lang': 'en-US', 'rate':1.3});
+      console.log(iterator);
+      iterator++;
+      setTimeout(function(){speakNumber(num)}, millisecondsBetween);
+    }
   }
 }
 

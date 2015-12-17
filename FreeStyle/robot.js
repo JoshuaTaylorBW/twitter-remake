@@ -1,3 +1,4 @@
+
 var speakInput;
 var btnSpeak;
 var wordList;
@@ -16,7 +17,10 @@ $(document).ready(function(){
   wordList = $("#wordlist");
 });
 
-
+function setRap(newRap){
+  rap = newRap; 
+  console.log(rap);
+}
 function saySomething(bpms) {
   iterator = 0;
   var toSay = rap;

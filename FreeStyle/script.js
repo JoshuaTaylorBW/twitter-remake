@@ -14,7 +14,7 @@ var queryInput = document.querySelector('#query'),
 var rapButton = document.getElementById("rap");
 
 
-audioTag.volume = 0.3;
+audioTag.volume = 0.1;
 audioTag.addEventListener('timeupdate', function() {
   var progressIndicator = document.querySelector('#progress');
   if (progressIndicator && audioTag.duration) {

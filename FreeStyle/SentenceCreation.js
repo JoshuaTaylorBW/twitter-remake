@@ -13,13 +13,15 @@ var usedObject = "";
 var usedBeing = "";
 var usedNoun = "";
 
-var LINES_AMOUNT = 12;
+var LINES_AMOUNT = 15;
 
 makeRap();
 
 function makeRap(){
 	fullRap = "";
 	for(var i = 0; i < LINES_AMOUNT; i++){
+		console.log(i);
+
 		var whatLine = Math.floor((Math.random() * 15));
 		if(whatLine < 8){
 			makeSVOSentence();

@@ -1,15 +1,13 @@
 {
-  "name": "Text2Speech",
-  "version": "0.1",
+  "name": "Lil' Tron",
+  "version": "0.6",
   "minimum_chrome_version": "23",
   "icons":{
-    "16": "icon_16.png",
-    "128": "icon_126.png"
   },
   "permissions": ["tts"],
   "app": {
     "background": {
-      "scripts": ["main.js"]
+      "scripts": ["/main.js"]
     }
   }
 }

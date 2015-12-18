@@ -42,7 +42,6 @@ function speakNumber(num){
   }else{
     if(iterator < num.length){
       chrome.tts.speak(num[iterator], {'lang': 'en-US', 'rate':1.3});
-      console.log(iterator);
       iterator++;
       setTimeout(function(){speakNumber2(num)}, millisecondsBetween);
     }
@@ -55,7 +54,6 @@ function speakNumber2(num){
   }else{
     if(iterator < num.length){
       chrome.tts.speak(num[iterator], {'lang': 'en-US', 'rate':1.3});
-      console.log(iterator);
       iterator++;
       setTimeout(function(){speakNumber(num)}, millisecondsBetween);
     }
